@@ -32,9 +32,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <ul id="app1" class="submenu collapse" data-parent="#iq-sidebar-toggle">
+                    <ul id="app1" class="submenu collapse mt-2" data-parent="#iq-sidebar-toggle">
                         <li class=" sidebar-layout">
-                            <a href="/inscription" class="svg-icon">
+                            <a href="/pratiquant" class="svg-icon">
                                 <i class="fa-solid fa-user-plus"></i>
                                 <span class="">Inscription</span>
                             </a>
@@ -75,7 +75,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <ul id="app2" class="submenu collapse" data-parent="#iq-sidebar-toggle">
+                    <ul id="app2" class="submenu collapse mt-2" data-parent="#iq-sidebar-toggle">
                         <li class=" sidebar-layout">
                             <a href="#" class="svg-icon">
                                 <i class="fa-solid fa-plus"></i>
@@ -104,7 +104,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <ul id="app3" class="submenu collapse" data-parent="#iq-sidebar-toggle">
+                    <ul id="app3" class="submenu collapse mt-2" data-parent="#iq-sidebar-toggle">
                         <li class=" sidebar-layout">
                             <a href="#" class="svg-icon">
                                 <i class="fa-solid fa-plus"></i>
