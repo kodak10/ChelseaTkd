@@ -31,7 +31,7 @@ class PratiquantController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'num_passeport' => 'required|unique:pratiquant|max:10',
+            'num_passeport' => 'required|unique:pratiquants|max:10',
             'grade' => '',
             'nom' => 'required',
             'prenoms' => 'required',
@@ -46,13 +46,12 @@ class PratiquantController extends Controller
             'photo' => '',
         ]);
 
-        // if (Pratiquant::where('num_passeport', $request->num_passeport)->first()) {
-        //     $validated->errors()->add('Numero de passeport', "Ce Numero de passeport est déjà utilisé.");
-        //     return redirect()->back()->with([
-        //         "success" => false,
-        //         "message" => "La valeur du champ est déjà utilisée"
-        //     ]);
-        // }
+        if (Pratiquant::where('num_passeport', $request->num_passeport)->first()) {
+            return redirect()->back()->with([
+                "success" => false,
+                "message" => "Ce Numero de passeport est déjà utilisé."
+            ]);
+        }
 
         $pratiquant = Pratiquant::create([
             'num_passeport' => ucwords(strtolower($request->num_passeport)),

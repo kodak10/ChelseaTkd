@@ -21,18 +21,19 @@
                             <table id="liste_pratiquant" class="display expandable-table dataTable no-footer" style="width: 100%;" role="grid">
                                   <thead>
                                       <tr role="row">
-                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Photo</th>
-                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Date d'adhesion</th>
+                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Cocher</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">N° de passeport</th>
+                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Date d'adhesion</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Nom & Prenoms</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Date de naissance</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Profession</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Numéro de téléphone</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Personne à contacter en cas d'urgence</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Numéro à contacter en cas d'urgence</th>
-                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Groupe sanguin</th>
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 118px;">Grade Actuel</th>
-                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 118px;">Action</th>
+                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 118px;">Modifier</th>
+                                            <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 118px;">Supprimer</th>
+
                                         </tr>
                                   </thead>
                                   <tbody>
@@ -40,11 +41,16 @@
                                     @php $num=1 @endphp
                                     @foreach ($pratiquants as $pratiquant)
                                         <tr>
-                                            <td>{{ $num++ }} </td>
-                                            <td>{{$pratiquant->nom}} {{$pratiquant->prenoms}}</td>
+                                            <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
                                             <td>{{$pratiquant->num_passeport}}</td>
+                                            <td>{{$pratiquant->created_at}}</td>
+                                            <td>{{$pratiquant->nom}} {{$pratiquant->prenoms}}</td>
+                                            <td>{{$pratiquant->date_nais}}</td>
+                                            <td>{{$pratiquant->profession}}</td>
                                             <td>{{$pratiquant->contact_pratiquant}}</td>
-                                            <td></td>
+                                            <td>{{$pratiquant->nom_parent}}</td>
+                                            <td>{{$pratiquant->contact_parent1}}</td>
+                                            <td>{{$pratiquant->grade}}</td>
 
 
                                             <td><a class="btn btn-primary" href="{{ route('pratiquant.edit',$pratiquant->id) }}">

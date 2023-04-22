@@ -1,8 +1,7 @@
 <div class="iq-sidebar  sidebar-default  ">
     <div class="iq-sidebar-logo d-flex align-items-end justify-content-between">
-        <a href="../backend/index.html" class="header-logo">
+        <a href="" class="header-logo">
             <img src="../assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="logo">
-            <img src="../assets/images/logo-dark.png" class="img-fluid rounded-normal d-none sidebar-light-img" alt="logo">
             <span>CHELSEA TAEKWONDO</span>
         </a>
         <div class="side-menu-bt-sidebar-1">
@@ -46,7 +45,7 @@
                             </a>
                         </li>
                         <li class=" sidebar-layout">
-                            <a href="#" class="svg-icon">
+                            <a href="/passage" class="svg-icon">
                                 <i class="fa-solid fa-check-double"></i>
                                 <span class="">Passage de grade</span>
                             </a>
@@ -119,6 +118,20 @@
                         </li>
 
                     </ul>
+                </li>
+
+                <li class=" sidebar-layout mt-3">
+                    <a href="/search_numero_passport" class="svg-icon">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <span class="ml-2">Recherche par numéro</span>
+                    </a>
+                </li>
+
+                <li class=" sidebar-layout">
+                    <a href="/search_name" class="svg-icon">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <span class="ml-2">Recherche par nom</span>
+                    </a>
                 </li>
 
 

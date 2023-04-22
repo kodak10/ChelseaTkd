@@ -11,9 +11,11 @@
                     <h5 class="p-3">
                         CREATION DE NOUVEAU PRATIQUANT
                     </h5>
-                    <a href="" class="p-3 d-flex">
+
+                    <a href="{{route('pratiquant.index')}}" class="p-3">
                         <i class="fa-solid fa-caret-left"></i>
-                        <span>RETOUR</span>
+
+                        RETOUR
                     </a>
                 </div>
                 <div class="card-body">
