@@ -1,9 +1,8 @@
 <div class="iq-sidebar  sidebar-default  ">
     <div class="iq-sidebar-logo d-flex align-items-end justify-content-between">
-        <a href="../backend/index.html" class="header-logo">
-            <img src="../assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="logo">
-            <img src="../assets/images/logo-dark.png" class="img-fluid rounded-normal d-none sidebar-light-img" alt="logo">
-            <span>CHELSEA TAEKWONDO</span>
+        <a href="/" class="header-logo">
+            <img src="{{asset('assets/images/logo.png')}}" class="img-fluid rounded-normal light-logo" alt="logo">
+            <span>CHELSEA TKD</span>
         </a>
         <div class="side-menu-bt-sidebar-1">
                 <svg xmlns="http://www.w3.org/2000/svg" class="text-light wrapper-menu" width="30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -15,7 +14,7 @@
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="side-menu">
                 <li class="active sidebar-layout">
-                    <a href="" class="svg-icon">
+                    <a href="/" class="svg-icon">
                         <i class="fa-solid fa-house"></i>
                         <span class="ml-2">Dashboard</span>
                     </a>
@@ -33,8 +32,8 @@
                         </svg>
                     </a>
                     <ul id="app1" class="submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class=" sidebar-layout">
-                            <a href="/inscription" class="svg-icon">
+                        <li class=" sidebar-layout mt-2">
+                            <a href="/pratiquants" class="svg-icon">
                                 <i class="fa-solid fa-user-plus"></i>
                                 <span class="">Inscription</span>
                             </a>
@@ -76,7 +75,7 @@
                         </svg>
                     </a>
                     <ul id="app2" class="submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class=" sidebar-layout">
+                        <li class=" sidebar-layout mt-2">
                             <a href="#" class="svg-icon">
                                 <i class="fa-solid fa-plus"></i>
                                 <span class="">Ajouter</span>
@@ -105,7 +104,7 @@
                         </svg>
                     </a>
                     <ul id="app3" class="submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class=" sidebar-layout">
+                        <li class=" sidebar-layout mt-2">
                             <a href="#" class="svg-icon">
                                 <i class="fa-solid fa-plus"></i>
                                 <span class="">Ajouter</span>

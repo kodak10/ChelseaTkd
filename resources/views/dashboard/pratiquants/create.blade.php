@@ -11,117 +11,155 @@
                     <h5 class="p-3">
                         CREATION DE NOUVEAU PRATIQUANT
                     </h5>
-                    <a href="/inscription" class="p-3 d-flex">
-                        <i class="fa-solid fa-caret-left"></i>
-                        <span>RETOUR</span>
-                    </a>
+
                 </div>
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="w-100">
                             <div class="row">
                                 @if ($message = Session::get('success'))
-                                <div class="alert alert-success">
-                                    <p>{{ $message }}</p>
-                                </div>
+                                    <div class="alert alert-success">
+                                        <p>{{ $message }}</p>
+                                    </div>
                                 @endif
-                                <form id="" method="post" action="">
+
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <div class="row">
+                                            @foreach ($errors->all() as $error)
+                                                <div class="col-lg-4">
+                                                    <li>{{ $error }}</li>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endif
+                                
+                                <form id="" method="post" action="{{route('pratiquants.store')}}">
                                     @csrf
                                    <div class="row">
                                          <div class="col-lg-6">
                                             <div class="form-group">
                                                     <label for="nom">Nom</label>
-                                                    <input type="text" class="form-control" placeholder="Entrez votre nom" name="nom">
-                                                    @error('nom')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                                    @enderror
+                                                    <input type="text" class="form-control" placeholder="Entrez votre nom" name="nom" value="{{ old('nom') }}">
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="prenoms">Prénoms</label>
-                                                    <input type="text" class="form-control" placeholder="Entrez votre prénom" name="prenoms">
-                                                    @error('prenoms')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                                    @enderror
+                                                    <input type="text" class="form-control" placeholder="Entrez votre prénom" name="prenoms" value="{{ old('prenoms') }}">
+                                                   
                                                 </div>
                                             </div>
                                    </div>
                                    <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="code_postal">Date de naissance</label>
-                                                <input type="date" class="form-control" placeholder="" name="code_postal">
-                                                @error('code_postal')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
+                                                <label for="dat_nais">Date de naissance</label>
+                                                <input type="date" class="form-control" placeholder="" name="dat_nais" value="{{ old('dat_nais') }}">
+                                               
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="ville">Lieu</label>
-                                                <input type="text" class="form-control" placeholder="Ville de résidence" name="ville">
-                                                @error('ville')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
+                                                <label for="lieu">Lieu</label>
+                                                <input type="text" class="form-control" placeholder="Lieu de naissance" name="lieu" value="{{ old('lieu') }}">
+                                               
                                             </div>
                                         </div>
                                    </div>
 
                                    <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="indicatif">Contact</label>
-                                            <input type="text" class="form-control" placeholder="Ex : +33" name="indicatif" required>
-                                            @error('indicatif')
-                                                <div class="alert alert-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="telephone">Grade Actuel</label>
-                                                <input type="text" class="form-control" placeholder="Entrez votre numéro de téléphone (Ex : 00000000)" name="telephone" required>
-                                                @error('telephone')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
+                                                <label for="contact">Contact</label>
+                                                <input type="text" class="form-control" placeholder="Ex : +225 0707572125" name="contact" value="{{ old('contact') }}">
+                                               
                                             </div>
                                         </div>
 
-
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="profession">Profession</label>
+                                                <input type="text" class="form-control" placeholder="Profession" name="profession" value="{{ old('profession') }}">
+                                                
+                                            </div>
+                                        </div>
                                    </div>
 
                                    <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="indicatif">Photo</label>
-                                                <input type="file" class="form-control" accept="jpg,png" placeholder="" name="indicatif" required>
-                                                @error('indicatif')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
+                                                <label for="num_passeport">Numéro de passeport</label>
+                                                <input type="text" class="form-control" placeholder="Numéro de passeport" name="num_passeport" value="{{ old('num_passeport') }}">
+                                               
                                             </div>
                                         </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="grade">Grade Actuel</label>
+                                                <select class="form-select" aria-label="" name="grade" value="{{ old('num_passeport') }}">
+                                                    <option selected>Selectionner le grade</option>
+                                                    <option value="1">Blanche</option>
+                                                    <option value="1">1ère Jaune</option>
+                                                    <option value="2">2ème Jaune</option>
+                                                    <option value="1">1ère Verte</option>
+                                                    <option value="2">2ème Verte</option>
+                                                    <option value="1">1ère Bleu</option>
+                                                    <option value="2">2ème Bleu</option>
+                                                    <option value="1">1ère Rouge</option>
+                                                    <option value="2">2ème Rouge</option>
+                                                    <option value="1">1ère Dan</option>
+                                                    <option value="1">2ère Dan</option>
+                                                    <option value="1">3ère Dan</option>
+                                                    <option value="1">4ère Dan</option>
+                                                    <option value="1">5ère Dan</option>
+                                                    <option value="1">6ère Dan</option>
+                                                    <option value="1">7ère Dan</option>
 
-
-
+                                                </select>
+                                                   
+                                            </div>
+                                        </div>
                                    </div>
 
-                                    <button class="btn btn-primary btn-block my-4" type="submit">Inscrire</button>
+                                   <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="contact_urgence">Contact en cas d'urgence</label>
+                                                <input type="text" class="form-control" placeholder="Contact en cas d'urgence" name="contact_urgence" value="{{ old('contact_urgence') }}">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="photo">Photo</label>
+                                                <input type="file" class="form-control" accept="jpg,png" placeholder="" name="photo">
+                                                
+                                            </div>
+                                        </div>
+                                   </div>
 
+                                   <div class="row">
+                                        <div class="col-lg-6">
+                                            <button class="btn btn-primary btn-block my-4" type="submit">Inscrire</button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <button class="btn btn-success btn-block my-4">Retour</button>
+                                        </div>
+                                   </div>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
     </div>
-    <!-- Page end  -->
+
 </div>
 
 

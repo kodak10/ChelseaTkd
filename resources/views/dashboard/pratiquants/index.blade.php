@@ -11,14 +11,43 @@
                     <h5 class="p-3">
                         LISTE DES PRATIQUANTS
                     </h5>
-                    <a href="/create" class="p-3">
-                        NOUVEAU PRATIQUANT
-                    </a>
+                    <button class="btn btn-secondary">
+                        <a href="/pratiquants/create" class="p-3">
+                            NOUVEAU PRATIQUANT
+                        </a>
+                    </button>
                 </div>
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="w-100">
-                            <table id="liste_pratiquant" class="display expandable-table dataTable no-footer" style="width: 100%;" role="grid">
+                            <table class="table table-striped" id="liste_pratiquant" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Numéro de passeport</th>
+                                        <th>Nom & Prénoms</th>
+                                        <th>Date de naissance</th>
+                                        <th>Contact</th>
+                                        <th>Grade Actuel</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Boucle sur les données pour afficher les lignes -->
+                                    @foreach($pratiquants as $pratiquant)
+                                        <tr>
+                                            <td></td>
+                                            <td>{{ $pratiquant->num_passeport }}</td>
+                                            <td>{{ $pratiquant->nom }} {{ $pratiquant->prenoms }}</td>
+                                            <td>{{ $pratiquant->dat_nais }}</td>
+                                            <td>{{ $pratiquant->contact }}</td>
+                                            <td>{{ $pratiquant->grade }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+
+
+                            {{-- <table id="liste_pratiquant" class="display expandable-table dataTable no-footer" style="width: 100%;" role="grid">
                                   <thead>
                                       <tr role="row">
                                             <th  tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 97px;">Photo</th>
@@ -42,7 +71,7 @@
 
 
                                   </tbody>
-                                </table>
+                                </table> --}}
 
                         </div>
                     </div>
@@ -58,3 +87,11 @@
 
 
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#liste_pratiquant').DataTable();
+        });
+    </script>
+@endpush
