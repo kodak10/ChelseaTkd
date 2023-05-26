@@ -45,7 +45,7 @@
                             </a>
                         </li>
                         <li class=" sidebar-layout">
-                            <a href="#" class="svg-icon">
+                            <a href="/passage" class="svg-icon">
                                 <i class="fa-solid fa-check-double"></i>
                                 <span class="">Passage de grade</span>
                             </a>
@@ -118,6 +118,20 @@
                         </li>
 
                     </ul>
+                </li>
+
+                <li class=" sidebar-layout mt-3">
+                    <a href="/search_numero_passport" class="svg-icon">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <span class="ml-2">Recherche par numéro</span>
+                    </a>
+                </li>
+
+                <li class=" sidebar-layout">
+                    <a href="/search_name" class="svg-icon">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <span class="ml-2">Recherche par nom</span>
+                    </a>
                 </li>
 
 

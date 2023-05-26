@@ -30,7 +30,7 @@ class PratiquantController extends Controller
      */
     public function store(Request $request)
     {
-       
+
 
         $validated = $request->validate([
             'nom'                    => ['required', 'string', 'max:255'],
@@ -43,13 +43,13 @@ class PratiquantController extends Controller
             'grade'                  => ['required', 'string', 'max:255'],
             'contact_urgence'                => ['string', 'max:255'],
             'photo'                => ['max:255'],
-            
+
         ]);
 
-        
+
 
         $pratiquants = Pratiquant::create([
-                       
+
             'nom' => ucwords(strtolower($request->nom)),
             'prenoms' => ucwords(strtolower($request->prenoms)),
             'dat_nais' => ucwords(strtolower($request->dat_nais)),
@@ -60,11 +60,11 @@ class PratiquantController extends Controller
             'grade' => ucwords(strtolower($request->grade)),
             'contact_urgence' => ucwords(strtolower($request->contact_urgence)),
             'photo' => ucwords(strtolower($request->photo)),
-           
+
         ]);
 
         return redirect()->route('pratiquants.create')->with('success', 'Pratiquant créé avec succès.');
-    
+
     }
 
     /**
