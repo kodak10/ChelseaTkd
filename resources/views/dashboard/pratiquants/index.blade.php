@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <h5 class="p-3">
-                        LISTE DES PRATIQUANTS
+                        LISTE DES MEMBRES
                     </h5>
                     <button class="btn btn-secondary">
                         <a href="/pratiquants/create" class="p-3">
@@ -21,7 +21,7 @@
                     <div class="d-flex align-items-center">
                         <div class="w-100">
                             <table class="table table-striped" id="liste_pratiquant" style="width:100%">
-                                <thead>
+                                <thead class="text-center">
                                     <tr>
                                         <th>#</th>
                                         <th>Numéro de passeport</th>
@@ -29,18 +29,22 @@
                                         <th>Date de naissance</th>
                                         <th>Contact</th>
                                         <th>Grade Actuel</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="text-center">
+                                    <?php $i=0; ?>
                                     <!-- Boucle sur les données pour afficher les lignes -->
                                     @foreach($pratiquants as $pratiquant)
+                                        <?php $i++; ?>
                                         <tr>
-                                            <td></td>
+                                            <td>{{$i}}</td>
                                             <td>{{ $pratiquant->num_passeport }}</td>
                                             <td>{{ $pratiquant->nom }} {{ $pratiquant->prenoms }}</td>
                                             <td>{{ $pratiquant->dat_nais }}</td>
                                             <td>{{ $pratiquant->contact }}</td>
                                             <td>{{ $pratiquant->grade }}</td>
+                                            <td class="text-center d-flex justify-content-between" > <a href=""><i class="fa-solid fa-pen-to-square"></i></a> <a href="" class="bg-danger"><i class="fa-solid fa-trash"></i></a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

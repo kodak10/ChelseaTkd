@@ -39,7 +39,7 @@
                             </a>
                         </li>
                         <li class=" sidebar-layout">
-                            <a href="#" class="svg-icon">
+                            <a href="/print_card" class="svg-icon">
                                 <i class="fa-solid fa-print"></i>
                                 <span class="">Imprimer des cartes</span>
                             </a>
