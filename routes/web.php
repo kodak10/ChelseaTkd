@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
 use App\Models\Pratiquant;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +12,7 @@ Route::get('/', function () {
 
 
 Route::resource('pratiquants', PratiquantController::class);
+Route::resource('article', ArticlesController::class);
 
 
 Route::get('/print_card', [PratiquantController::class, 'pageListPratiquant'])->name('list_pratiquants');

@@ -64,7 +64,7 @@
 
 
                 <li class="px-3 pt-3 pb-2">
-                    <span class="text-uppercase small font-weight-bold">ARTICLE</span>
+                    <span class="text-uppercase small font-weight-bold">ARTICLES</span>
                 </li>
                 <li class="sidebar-layout">
                     <a href="#app2" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
@@ -76,13 +76,13 @@
                     </a>
                     <ul id="app2" class="submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class=" sidebar-layout mt-2">
-                            <a href="#" class="svg-icon">
+                            <a href="/article/create" class="svg-icon">
                                 <i class="fa-solid fa-plus"></i>
                                 <span class="">Ajouter</span>
                             </a>
                         </li>
                         <li class=" sidebar-layout">
-                            <a href="#" class="svg-icon">
+                            <a href="/article/index" class="svg-icon">
                                 <i class="fa-solid fa-pen-to-square"></i>
                                 <span class="">Modifier</span>
                             </a>
