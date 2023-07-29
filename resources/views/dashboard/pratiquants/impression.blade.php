@@ -11,11 +11,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                @foreach ($etudiants as $etudiant )
-                    <div class="col-lg-4">
-                        <label for="">Nom :</label> <input type="text" value="{{$etudiant->nom}}"/>  
+                @foreach($pratiquants->chunk(2) as $pratiquantsChunk)
+                    <div class="page">
+                        @foreach($pratiquantsChunk as $pratiquants)
+                            <div class="card">
+                                <h2>{{ $pratiquants->nom }}</h2>
+                                <p>{{ $pratiquants->prenoms }}</p>
+                            </div>
+                        @endforeach
                     </div>
                 @endforeach
+
+                
             </div>
 
             <div class="col-lg-6">

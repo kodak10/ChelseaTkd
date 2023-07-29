@@ -113,61 +113,19 @@ class PratiquantController extends Controller
 
     public function generateCardImpression(Request $request)
     {
-        // Générez les données nécessaires pour l'impression (par exemple, à partir d'une base de données)
 
-        // $pratiquants = Pratiquant::findOrFail($id);
+        $selectedPratiquants = $request->input('pratiquants[]');
+        $pratiquants = Pratiquant::whereIn('id', $selectedPratiquants)->get();
 
-        // $pratiquants_cards = [
-        //     'element1' => 'Donnée 1',
-        //     'element2' => 'Donnée 2',
-        //     'element3' => 'Donnée 3',
-        //     'element4' => 'Donnée 4',
-        // ];
+        $pdf = PDF::loadView('dashboard.pratiquants.print', compact('pratiquants'));
+        return $pdf->stream('cartes_de_membre.pdf');
 
-        //$donnees = Pratiquant::get();
+    }
 
-        // $etudiantsCoches = $request->input('etudiants', []);
-        // $etudiants = Etudiant::whereIn('id', $etudiantsCoches)->get();
-        // return view('etudiants.bulletins', ['etudiants' => $etudiants]);
-
-
-        //$donnees = Pratiquant::where('id', $id)->get();
-
-        // Générez le fichier PDF
-       // $pdf = PDF::loadView('dashboard.pratiquants.impression', $pratiquants_cards);
-
-        // Retournez la vue PDF pour l'affichage
-        //return $pdf->stream('impression.pdf');
-
-
-
-
-
-
-        // $pratiquantsCoches = $request->input('pratiquants', []);
-
-        // // Récupérer les informations des étudiants cochés à partir de votre modèle de données
-        // $pratiquants = Pratiquant::whereIn('id', $pratiquantsCoches)->get();
-
-        
-        
-        // // Générer l'impression pour les étudiants cochés
-
-        // $pdf = PDF::loadView('dashboard.pratiquants.impression', compact('pratiquants'));
-        
-		// //$name='carte-'.$pratiquants_cards->id. ".pdf";
-		// return $pdf->stream('impression.pdf');
-
-
-        $etudiantsCoches = $request->input('pratiquants', []);
-
-        // Récupérer les informations des étudiants cochés à partir de votre modèle de données
-        $etudiants = Pratiquant::whereIn('id', $etudiantsCoches)->get();
-
-        // Générer l'impression pour les étudiants cochés
-
-        return view('dashboard.pratiquants.impression', compact('etudiants'));
-
+    public function passage_de_grade()
+    {
+        $pratiquants = Pratiquant::get();
+        return view('dashboard.passage_grade.index', compact('pratiquants'));
     }
 
 

@@ -29,7 +29,24 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'titre' => 'required',
+            'image_couverture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'texte' => 'required',
+            //'images[]' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $CouverturePath = $request->file('image_couverture')->store('image_couverture');
+
+
+        $article = Article::create([
+            'titre' => $request->input('titre'),
+            'texte' => $request->input('texte'),
+            //'student_number' => $request->input('student_number'),
+            'image_couverture' => $CouverturePath,
+        ]);
+
+        return redirect('/article')->with('success', 'Article added successfully.');
     }
 
     /**

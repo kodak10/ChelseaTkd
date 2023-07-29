@@ -12,6 +12,12 @@
                         CREATION DE NOUVEAU MEMBRE
                     </h5>
 
+                    <button class="btn btn-secondary">
+                        <a href="#" class="p-3">
+                            IMPORTER
+                        </a>
+                    </button>
+
                 </div>
                 <div class="card-body">
                     <div class="d-flex align-items-center">
@@ -106,7 +112,7 @@
                                             <div class="form-group">
                                                 <label for="grade">Grade Actuel</label>
                                                 <select class="form-select" aria-label="" name="grade" value="{{ old('num_passeport') }}">
-                                                    <option selected>Selectionner le grade</option>
+                                                    <option>Selectionner le grade</option>
                                                     <option value="Blanche">Blanche</option>
                                                     <option value="1ème Jaune">1ère Jaune</option>
                                                     <option value="2ème Jaune">2ème Jaune</option>

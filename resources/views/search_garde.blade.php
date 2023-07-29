@@ -47,13 +47,13 @@
                 <a href="/">Dashboard</a>
                 <div class="content ">
                     <form action="" method="post" class="mb-3">
-                        <input type="text" class="form-control p-3" placeholder="Entrez votre N° de passeport" name="num_passeport">
+                        <input type="text" class="form-control p-3" placeholder="Entrer votre N° de passeport" name="num_passeport">
                         @error('num_passeport')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </form>
 
-                    <a href="/search_name" class="">Je n'est pas mon numero de passeport</a>
+                    <a href="/search/name" class="">Je n'ai pas mon numéro de passeport</a>
                 </div>
             </div>
 

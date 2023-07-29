@@ -35,7 +35,7 @@
                                     </div>
                                 @endif
 
-                                <form id="" method="post" action="{{route('pratiquants.store')}}">
+                                <form id="" method="post" action="{{route('article.store')}}">
                                     @csrf
 
 
@@ -43,14 +43,14 @@
                                          <div class="col-lg-6">
                                             <div class="form-group">
                                                     <label for="nom">Titre</label>
-                                                    <input type="text" class="form-control" placeholder="Entrez votre nom" name="nom" value="{{ old('nom') }}">
+                                                    <input type="text" class="form-control" placeholder="Entrer le titre" name="titre" value="{{ old('titre') }}">
 
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label for="prenoms">Image de couverture</label>
-                                                    <input type="file" accept="jpg,png" class="form-control" placeholder="Entrez votre prénom" name="prenoms" value="{{ old('prenoms') }}">
+                                                    <label>Image de couverture</label>
+                                                    <input type="file" accept="jpg,png" class="form-control"name="image_couverture" value="{{ old('image_couverture') }}">
 
                                                 </div>
                                             </div>
@@ -58,8 +58,8 @@
                                    <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label for="dat_nais">Texte</label>
-                                                <textarea class="ckeditor form-control" name="wysiwyg-editor texte"></textarea>
+                                                <label for="texte">Texte</label>
+                                                <textarea class="ckeditor form-control" name="texte wysiwyg-editor "></textarea>
                                             </div>
                                         </div>
 
@@ -70,17 +70,12 @@
                                    <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label for="dat_nais">Images / Videos</label>
+                                                <label for="images[]">Images / Videos</label>
                                                 <div class="needsclick dropzone" id="document-dropzone">
 
                                                 </div>
                                             </div>
-
-
-
-
-
-
+                                        </div>
                                    </div>
 
                                    <div class="row">
@@ -88,7 +83,7 @@
                                             <button class="btn btn-primary btn-block my-4" type="submit">Enregistrer</button>
                                         </div>
                                         <div class="col-lg-6">
-                                            <a class="btn btn-success btn-block my-4" href="{{route('article.index')}}">Retour</a>
+                                            <a class="btn btn-success btn-block my-4" href="/">Retour</a>
                                         </div>
                                    </div>
                                 </form>
@@ -111,15 +106,4 @@
 
 @endsection
 
-@push('scripts')
 
-
-    <script>
-        $(document).ready(function() {
-            $('#liste_pratiquant').DataTable();
-        });
-    </script>
-
-
-
-@endpush

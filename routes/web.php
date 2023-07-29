@@ -19,7 +19,13 @@ Route::get('/print_card', [PratiquantController::class, 'pageListPratiquant'])->
 Route::post('/print_card', [PratiquantController::class, 'generateCardImpression'])->name('print');
 
 
+Route::get('/search/name', function(){
+    return view('search_garde_name');
+});
 
+Route::get('/search/passeport', function(){
+    return view('search_garde');
+});
 
 
 

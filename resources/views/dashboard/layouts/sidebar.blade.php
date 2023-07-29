@@ -11,7 +11,9 @@
             </div>
     </div>
     <div class="data-scrollbar" data-scroll="1">
+
         <nav class="iq-sidebar-menu">
+
             <ul id="iq-sidebar-toggle" class="side-menu">
                 <li class="active sidebar-layout">
                     <a href="/" class="svg-icon">
@@ -19,6 +21,7 @@
                         <span class="ml-2">Dashboard</span>
                     </a>
                 </li>
+
                 <li class="px-3 pt-3 pb-2">
                     <span class="text-uppercase small font-weight-bold">ADMINISTRATION</span>
                 </li>
@@ -45,27 +48,18 @@
                             </a>
                         </li>
                         <li class=" sidebar-layout">
-                            <a href="/passage" class="svg-icon">
+                            <a href="/passage_grade" class="svg-icon">
                                 <i class="fa-solid fa-check-double"></i>
                                 <span class="">Passage de grade</span>
                             </a>
                         </li>
-
-
                     </ul>
                 </li>
 
-                {{-- <li class=" sidebar-layout">
-                    <a href="#" class="svg-icon">
-
-                        <span class="ml-2">Icon</span>
-                    </a>
-                </li> --}}
-
-
                 <li class="px-3 pt-3 pb-2">
-                    <span class="text-uppercase small font-weight-bold">ARTICLES</span>
+                    <span class="text-uppercase small font-weight-bold">ARTICLE</span>
                 </li>
+
                 <li class="sidebar-layout">
                     <a href="#app2" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                         <i class="fa-solid fa-newspaper"></i>
@@ -82,7 +76,7 @@
                             </a>
                         </li>
                         <li class=" sidebar-layout">
-                            <a href="/article/index" class="svg-icon">
+                            <a href="#" class="svg-icon">
                                 <i class="fa-solid fa-pen-to-square"></i>
                                 <span class="">Modifier</span>
                             </a>
@@ -91,10 +85,10 @@
                     </ul>
                 </li>
 
-
                 <li class="px-3 pt-3 pb-2">
                     <span class="text-uppercase small font-weight-bold">PARAMETRAGE</span>
                 </li>
+
                 <li class="sidebar-layout">
                     <a href="#app3" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                         <i class="fa-solid fa-fingerprint"></i>
@@ -119,24 +113,10 @@
 
                     </ul>
                 </li>
-
-                <li class=" sidebar-layout mt-3">
-                    <a href="/search_numero_passport" class="svg-icon">
-                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                        <span class="ml-2">Recherche par numéro</span>
-                    </a>
-                </li>
-
-                <li class=" sidebar-layout">
-                    <a href="/search_name" class="svg-icon">
-                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                        <span class="ml-2">Recherche par nom</span>
-                    </a>
-                </li>
-
-
             </ul>
+
         </nav>
+        
         <div class="pt-5 pb-5"></div>
     </div>
 </div>

@@ -50,7 +50,7 @@
                        <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Entrez votre prénoms" name="prenoms">
+                                <input type="text" class="form-control" placeholder="Entrer votre prénoms" name="prenoms">
                                 @error('prenoms')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -58,7 +58,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Entrez votre prénoms" name="prenoms">
+                                <input type="text" class="form-control" placeholder="Entrer votre prénoms" name="prenoms">
                                 @error('prenoms')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="date" class="form-control" placeholder="Entrez votre prénoms" name="prenoms">
+                                <input type="date" class="form-control" placeholder="Entrer votre prénoms" name="prenoms">
                                 @error('prenoms')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -76,7 +76,7 @@
                        <button class="w-100 btn btn-success mt-5">Rechercher</button>
                     </form>
 
-                    <a href="/search_numero_passport">J'ai mon numero de passeport</a>
+                    <a href="/search/passeport">J'ai mon numéro de passeport</a>
                 </div>
             </div>
 
