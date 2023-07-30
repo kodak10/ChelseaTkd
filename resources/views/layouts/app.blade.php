@@ -63,7 +63,7 @@
 
                             <!-- website logo -->
                             <div class="logo-header mostion logo-dark">
-                                <a href="" class="d-flex"><img src="assets/images/logo.png" style="height: 100px; width: 100px;" alt="Site Logo"/> <span style="font-size: 20px;letter-spacing: 0px;display: flex;align-items: center;">Chelsea Taekwondo</span></a>
+                                <a href="/" class="d-flex"><img src="assets/images/logo.png" style="height: 100px; width: 100px;" alt="Site Logo"/> <span style="font-size: 20px;letter-spacing: 0px;display: flex;align-items: center;">Chelsea Taekwondo</span></a>
                             </div>
 
                             <!-- Nav Toggle Button -->
@@ -76,7 +76,7 @@
                             <!-- Extra Nav -->
                             <div class="extra-nav">
                                 <div class="extra-cell">
-                                    <a href="" class="btn btn-primary btn-skew appointment-btn"><span>Contactez-Nous</span></a>
+                                    <a href="#" class="btn btn-primary btn-skew appointment-btn"><span>Contactez-Nous</span></a>
                                 </div>
                             </div>
                             <!-- Extra Nav -->
@@ -84,42 +84,43 @@
                             <!-- Main Nav -->
                             <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
                                 <div class="logo-header">
-                                    <a href=""><img src="assets/images/logo.png" alt="Site Logo"/></a>
+                                    <a href="/"><img src="assets/images/logo.png" alt="Site Logo"/></a>
                                 </div>
                                 <ul class="nav navbar-nav navbar navbar-left">
-                                    <li class=" ">
+                                    <li class="">
                                         <a href="/" class="">Accueil</a>
                                     </li>
                                     <li class="sub-menu-down">
                                         <a href="#" >A Propos</a>
                                         <ul class="sub-menu">
-                                            <li class=" ">
-                                                <a href="">Chelsea Taekwondo</a>
+                                            <li class="">
+                                                <a href="#">Chelsea Taekwondo</a>
                                             </li>
                                             <li class=" ">
-                                                <a href="">Historique du Taekwondo</a>
+                                                <a href="#">Historique du Taekwondo</a>
                                             </li>
                                         </ul>
                             		</li>
-                                    <li class=" ">
+                                    <li class="">
                                         <a href="#">Blog</a>
                                     </li>
                                     <li class="sub-menu-down ">
-                                        <a href="" >Galerie</a>
+                                        <a href="#" >Galerie</a>
                                         <ul class="sub-menu">
                                             <li class=" ">
-                                                <a href="">Images</a>
+                                                <a href="#">Images</a>
                                             </li>
                                             <li class=" ">
-                                                <a href="">Vidéos</a>
+                                                <a href="#">Vidéos</a>
                                             </li>
                                         </ul>
                             		</li>
-                                    <li class=" ">
+                                    <li class="">
                                         <a href="#">Mon Parcours</a>
                                     </li>
                                     <li class=" ">
-                                        <a href="/home"><i class="fa-solid fa-user"></i></a>
+                                        {{-- <a href="/home"><i class="fa-solid fa-user"></i></a> --}}
+                                        <a href="/home">Administration</a>
                                     </li>
                                 </ul>
                                 <div class="dz-social-icon">
