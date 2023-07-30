@@ -7,13 +7,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PratiquantController;
 
 Route::get('/', function () {
-    return view('dashboard.home');
+    return view('index');
 });
-
 
 Route::resource('pratiquants', PratiquantController::class);
 Route::resource('article', ArticlesController::class);
-
 
 Route::get('/print_card', [PratiquantController::class, 'pageListPratiquant'])->name('list_pratiquants');
 Route::post('/print_card', [PratiquantController::class, 'generateCardImpression'])->name('print');
@@ -21,17 +19,15 @@ Route::post('/passage_grade', [PratiquantController::class, 'passage_de_grade'])
 
 
 Route::get('/search/name', function(){
-    return view('search_garde_name');
+    return view('parcours.nom');
 });
-
 Route::get('/search/passeport', function(){
-    return view('search_garde');
+    return view('parcours.passport');
 });
 
 
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
-//Auth::routes();
-
-//Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+?>
